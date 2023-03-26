@@ -1,0 +1,11 @@
+{
+  "name": "florisvink.nl",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "rm -rf ./public && hugo && node ./node_modules/prettier/bin-prettier.js --write --ignore-unknown public/"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.7",
+    "prettier-plugin-go-template": "^0.0.13"
+  }
+}

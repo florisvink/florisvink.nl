@@ -1,0 +1,15 @@
+{{ define "main" }}
+  <h1>{{ .Site.Title }}</h1>
+  <ul class="posts">
+    {{ range .Pages }}
+      <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    {{ end }}
+  </ul>
+  {{ $image := resources.Get "images/floris-vink.png" }}
+  {{ $image := $image.Resize "x400 jpeg q50" }}
+  <img
+    src="{{ $image.RelPermalink }}"
+    width="{{ $image.Width }}"
+    height="{{ $image.Height }}"
+  />
+{{ end }}
